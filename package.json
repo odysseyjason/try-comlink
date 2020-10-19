@@ -1,0 +1,34 @@
+{
+  "name": "javascript-boilerplate",
+  "version": "1.0.0",
+  "description": "Javascript development environment",
+  "author": "Your name here",
+  "scripts": {
+    "start": "babel-node server/server.js",
+    "lint": "eslint  ./client",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node scripts/build.js",
+    "postbuild": "babel-node scripts/distServer.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "cors": "^2.8.4",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "open": "^7.0.3",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.7"
+  }
+}
